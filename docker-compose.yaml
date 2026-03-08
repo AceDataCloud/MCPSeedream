@@ -1,0 +1,9 @@
+version: "3"
+services:
+  mcp-seedream:
+    platform: linux/amd64
+    container_name: "mcp-seedream"
+    build: ./
+    image: "ghcr.io/acedatacloud/mcp-seedream:${BUILD_NUMBER}"
+    ports:
+      - "8000:8000"

@@ -35,7 +35,7 @@ jobs:
           import requests
           import re
           try:
-              resp = requests.get('https://pypi.org/pypi/mcp-seedream/json', timeout=10)
+              resp = requests.get('https://pypi.org/pypi/mcp-seedream-pro/json', timeout=10)
               if resp.status_code == 200:
                   versions = resp.json().get('releases', {}).keys()
                   today_prefix = '${DATE_PREFIX}'
@@ -97,7 +97,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/project/mcp-seedream/${{ needs.build.outputs.version }}
+      url: https://pypi.org/project/mcp-seedream-pro/${{ needs.build.outputs.version }}
     steps:
       - name: Download distribution artifacts
         uses: actions/download-artifact@v4

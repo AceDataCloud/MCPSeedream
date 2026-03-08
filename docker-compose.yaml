@@ -1,9 +1,9 @@
 version: "3"
 services:
-  mcp-seedream:
+  mcp-seedream-pro:
     platform: linux/amd64
-    container_name: "mcp-seedream"
+    container_name: "mcp-seedream-pro"
     build: ./
-    image: "ghcr.io/acedatacloud/mcp-seedream:${BUILD_NUMBER}"
+    image: "ghcr.io/acedatacloud/mcp-seedream-pro:${BUILD_NUMBER}"
     ports:
       - "8000:8000"

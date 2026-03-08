@@ -1,10 +1,10 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: mcp-seedream
+  name: mcp-seedream-pro
   namespace: acedatacloud
   labels:
-    app: mcp-seedream
+    app: mcp-seedream-pro
   annotations:
     kubernetes.io/ingress.class: "nginx-router"
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
@@ -25,6 +25,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: mcp-seedream
+                name: mcp-seedream-pro
                 port:
                   number: 8000

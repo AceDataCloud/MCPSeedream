@@ -2,15 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: mcp-seedream
-  name: mcp-seedream
+    app: mcp-seedream-pro
+  name: mcp-seedream-pro
   namespace: acedatacloud
 spec:
   replicas: 1
   revisionHistoryLimit: 5
   selector:
     matchLabels:
-      app: mcp-seedream
+      app: mcp-seedream-pro
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -19,11 +19,11 @@ spec:
   template:
     metadata:
       labels:
-        app: mcp-seedream
+        app: mcp-seedream-pro
     spec:
       containers:
-        - name: mcp-seedream
-          image: ghcr.io/acedatacloud/mcp-seedream:${TAG}
+        - name: mcp-seedream-pro
+          image: ghcr.io/acedatacloud/mcp-seedream-pro:${TAG}
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000

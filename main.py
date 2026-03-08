@@ -42,7 +42,7 @@ def safe_print(text: str) -> None:
 def get_version() -> str:
     """Get the package version."""
     try:
-        return metadata.version("mcp-seedream")
+        return metadata.version("mcp-seedream-pro")
     except metadata.PackageNotFoundError:
         return "dev"
 
@@ -54,9 +54,9 @@ def main() -> None:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  mcp-seedream                    # Run with stdio transport (default)
-  mcp-seedream --transport http   # Run with HTTP transport
-  mcp-seedream --version          # Show version
+  mcp-seedream-pro                    # Run with stdio transport (default)
+  mcp-seedream-pro --transport http   # Run with HTTP transport
+  mcp-seedream-pro --version          # Show version
 
 Environment Variables:
   ACEDATACLOUD_API_TOKEN         API token from AceDataCloud (required)
@@ -67,7 +67,7 @@ Environment Variables:
     parser.add_argument(
         "--version",
         action="version",
-        version=f"mcp-seedream {get_version()}",
+        version=f"mcp-seedream-pro {get_version()}",
     )
     parser.add_argument(
         "--transport",

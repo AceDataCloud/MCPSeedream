@@ -1,7 +1,7 @@
 # MCP Seedream
 
-[![PyPI version](https://img.shields.io/pypi/v/mcp-seedream.svg)](https://pypi.org/project/mcp-seedream/)
-[![PyPI downloads](https://img.shields.io/pypi/dm/mcp-seedream.svg)](https://pypi.org/project/mcp-seedream/)
+[![PyPI version](https://img.shields.io/pypi/v/mcp-seedream-pro.svg)](https://pypi.org/project/mcp-seedream-pro/)
+[![PyPI downloads](https://img.shields.io/pypi/dm/mcp-seedream-pro.svg)](https://pypi.org/project/mcp-seedream-pro/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![MCP](https://img.shields.io/badge/MCP-Compatible-green.svg)](https://modelcontextprotocol.io)
@@ -35,7 +35,7 @@ Get your API token from [AceDataCloud Platform](https://platform.acedata.cloud):
 
 ```bash
 # Install from PyPI
-pip install mcp-seedream
+pip install mcp-seedream-pro
 
 # Or clone and install locally
 git clone https://github.com/AceDataCloud/MCPSeedream.git
@@ -57,7 +57,7 @@ echo "ACEDATACLOUD_API_TOKEN=your_token_here" > .env
 
 ```bash
 # Run the server
-mcp-seedream
+mcp-seedream-pro
 
 # Or with Python directly
 python main.py
@@ -74,7 +74,7 @@ Add to your Claude Desktop configuration:
 {
   "mcpServers": {
     "seedream": {
-      "command": "mcp-seedream",
+      "command": "mcp-seedream-pro",
       "env": {
         "ACEDATACLOUD_API_TOKEN": "your_api_token_here"
       }
@@ -94,7 +94,7 @@ Or if using uv:
         "run",
         "--directory",
         "/path/to/MCPSeedream",
-        "mcp-seedream"
+        "mcp-seedream-pro"
       ],
       "env": {
         "ACEDATACLOUD_API_TOKEN": "your_api_token_here"
@@ -153,8 +153,8 @@ curl -X POST https://seedream.mcp.acedata.cloud/mcp \
 ### Self-Hosting with Docker
 
 ```bash
-docker pull ghcr.io/acedatacloud/mcp-seedream:latest
-docker run -p 8000:8000 ghcr.io/acedatacloud/mcp-seedream:latest
+docker pull ghcr.io/acedatacloud/mcp-seedream-pro:latest
+docker run -p 8000:8000 ghcr.io/acedatacloud/mcp-seedream-pro:latest
 ```
 
 Clients connect with their own Bearer token — the server extracts the token from each request's `Authorization` header and uses it for upstream API calls.
@@ -245,7 +245,7 @@ Claude: I'll use the v3 model with a fixed seed.
 ### Command Line Options
 
 ```bash
-mcp-seedream --help
+mcp-seedream-pro --help
 
 Options:
   --version          Show version
@@ -384,4 +384,4 @@ This server wraps the [AceDataCloud Seedream API](https://platform.acedata.cloud
 - [Seedream API Documentation](https://platform.acedata.cloud/documents/seedream-images)
 - [MCP Protocol](https://modelcontextprotocol.io)
 - [GitHub Repository](https://github.com/AceDataCloud/MCPSeedream)
-- [PyPI Package](https://pypi.org/project/mcp-seedream/)
+- [PyPI Package](https://pypi.org/project/mcp-seedream-pro/)

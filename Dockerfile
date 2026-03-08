@@ -6,4 +6,4 @@ COPY . .
 
 RUN pip install --no-cache-dir .
 
-CMD ["mcp-seedream", "--transport", "http", "--port", "8000"]
+CMD ["mcp-seedream-pro", "--transport", "http", "--port", "8000"]

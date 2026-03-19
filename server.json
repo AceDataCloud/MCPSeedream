@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.acedatacloud/mcp-seedream-pro",
+  "name": "io.github.AceDataCloud/mcp-seedream-pro",
   "description": "MCP server for ByteDance Seedream AI image generation",
-  "version": "0.1.0",
+  "version": "2026.3.19.8",
   "repository": {
     "url": "https://github.com/AceDataCloud/MCPSeedream",
     "source": "github"
@@ -10,7 +10,7 @@
   "packages": [
     {
       "identifier": "mcp-seedream-pro",
-      "version": "0.1.0",
+      "version": "2026.3.19.8",
       "transport": {
         "type": "stdio"
       },
@@ -28,4 +28,3 @@
   ],
   "websiteUrl": "https://platform.acedata.cloud"
 }
-

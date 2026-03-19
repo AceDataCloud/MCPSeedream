@@ -24,7 +24,7 @@ spec:
       containers:
         - name: mcp-seedream-pro
           image: ghcr.io/acedatacloud/mcp-seedream-pro:${TAG}
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 8000
               protocol: TCP

@@ -147,7 +147,9 @@ Environment Variables:
 
             class BearerAuthMiddleware:
                 """ASGI middleware that extracts Bearer token and rejects
-                unauthenticated requests (except /health)."""
+                unauthenticated requests (except /health, /.well-known/, /mcp)."""
+
+                PUBLIC_PATHS = ("/health", "/.well-known/", "/mcp")
 
                 def __init__(self, app):  # type: ignore[no-untyped-def]
                     self.app = app
@@ -155,11 +157,7 @@ Environment Variables:
                 async def __call__(self, scope, receive, send):  # type: ignore[no-untyped-def]
                     if scope["type"] == "http":
                         path = scope.get("path", "")
-                        if (
-                            path == "/health"
-                            or path.startswith("/.well-known/")
-                            or path.startswith("/mcp")
-                        ):
+                        if any(path == p or path.startswith(p) for p in self.PUBLIC_PATHS):
                             await self.app(scope, receive, send)
                             return
                         headers = dict(scope.get("headers", []))

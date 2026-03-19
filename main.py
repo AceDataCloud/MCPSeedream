@@ -176,25 +176,50 @@ Environment Variables:
 
             async def server_card(_request: Request) -> JSONResponse:
                 """MCP Server Card for Smithery and other registries."""
-                return JSONResponse({
-                    "serverInfo": {"name": "MCP Seedream"},
-                    "authentication": {"required": True, "schemes": ["bearer"]},
-                    "tools": [
-                    {"name": "seedream_generate_image", "description": "Generate image from text"},
-                    {"name": "seedream_edit_image", "description": "Edit an existing image"},
-                    {"name": "seedream_get_task", "description": "Query task status"},
-                    {"name": "seedream_get_tasks_batch", "description": "Query multiple tasks"},
-                    {"name": "seedream_list_models", "description": "List available models"},
-                    {"name": "seedream_list_sizes", "description": "List supported image sizes"}
-                    ],
-                    "prompts": [
-                    {"name": "seedream_image_generation_guide", "description": "Guide for image generation"},
-                    {"name": "seedream_prompt_writing_guide", "description": "Prompt writing guide"},
-                    {"name": "seedream_workflow_examples", "description": "Example workflows"}
-                    ],
-                    "resources": [],
-                })
-
+                return JSONResponse(
+                    {
+                        "serverInfo": {"name": "MCP Seedream"},
+                        "authentication": {"required": True, "schemes": ["bearer"]},
+                        "tools": [
+                            {
+                                "name": "seedream_generate_image",
+                                "description": "Generate image from text",
+                            },
+                            {
+                                "name": "seedream_edit_image",
+                                "description": "Edit an existing image",
+                            },
+                            {"name": "seedream_get_task", "description": "Query task status"},
+                            {
+                                "name": "seedream_get_tasks_batch",
+                                "description": "Query multiple tasks",
+                            },
+                            {
+                                "name": "seedream_list_models",
+                                "description": "List available models",
+                            },
+                            {
+                                "name": "seedream_list_sizes",
+                                "description": "List supported image sizes",
+                            },
+                        ],
+                        "prompts": [
+                            {
+                                "name": "seedream_image_generation_guide",
+                                "description": "Guide for image generation",
+                            },
+                            {
+                                "name": "seedream_prompt_writing_guide",
+                                "description": "Prompt writing guide",
+                            },
+                            {
+                                "name": "seedream_workflow_examples",
+                                "description": "Example workflows",
+                            },
+                        ],
+                        "resources": [],
+                    }
+                )
 
             @contextlib.asynccontextmanager
             async def lifespan(_app: Starlette):  # type: ignore[no-untyped-def]

@@ -1,5 +1,7 @@
 # MCP Seedream
 
+<!-- mcp-name: io.github.acedatacloud/mcp-seedream-pro -->
+
 [![PyPI version](https://img.shields.io/pypi/v/mcp-seedream-pro.svg)](https://pypi.org/project/mcp-seedream-pro/)
 [![PyPI downloads](https://img.shields.io/pypi/dm/mcp-seedream-pro.svg)](https://pypi.org/project/mcp-seedream-pro/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)

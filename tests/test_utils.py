@@ -17,6 +17,7 @@ class TestFormatImageResult:
         assert data["trace_id"] == "test-trace-456"
         assert len(data["data"]) == 1
         assert "image_url" in data["data"][0]
+        assert data["mcp_async_submission"]["poll_tool"] == "seedream_get_task"
 
     def test_format_edit_response(self, mock_edit_response):
         """Test formatting successful edit response."""
@@ -63,6 +64,7 @@ class TestFormatTaskResult:
         assert data["id"] == "task-123"
         assert data["request"]["model"] == "doubao-seedream-4-0-250828"
         assert data["response"]["success"] is True
+        assert data["mcp_task_polling"]["poll_tool"] == "seedream_get_task"
 
     def test_format_error(self):
         """Test formatting error response."""

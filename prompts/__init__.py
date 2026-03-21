@@ -69,7 +69,8 @@ When the user wants to generate or edit images, choose the appropriate tool base
 - User asks about available image sizes or resolutions
 
 ## Important Notes:
-1. Image generation is async — always return the task_id to the user
+1. Image generation is async in MCP — generation tools should return quickly with a task_id
+2. After generate/edit submission, poll with `seedream_get_task` until the final image URLs are available
 2. Detailed prompts produce significantly better results
 3. Supports both Chinese and English prompts
 4. The v4.5 model produces the highest quality but costs slightly more
@@ -160,8 +161,8 @@ def seedream_workflow_examples() -> str:
      alpine peaks silhouetted, landscape photography, wide-angle lens, HDR",
      model="doubao-seedream-4-0-250828"
    )`
-3. Return task_id to user
-4. If needed, check status with `seedream_get_task(task_id)`
+3. Return the task_id from the submission response
+4. Poll with `seedream_get_task(task_id)` until the final image URLs are available
 
 ## Workflow 2: High-Quality Generation with v4.5
 1. User: "I need the highest quality image of a luxury watch"

@@ -31,6 +31,8 @@ spec:
           env:
             - name: MCP_SERVER_URL
               value: "https://seedream.mcp.acedata.cloud"
+            - name: ACEDATACLOUD_OAUTH_CLIENT_ID
+              value: "uIXm6GbjXJJVR7h8ccXqvj0cgcAKKw3IkhQ-hD8Grk8"
           resources:
             limits:
               cpu: 500m

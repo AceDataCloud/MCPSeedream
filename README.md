@@ -124,6 +124,118 @@ Or install the [Ace Data Cloud MCP extension](https://marketplace.visualstudio.c
 }
 ```
 
+
+#### Claude Code
+
+Claude Code supports MCP servers natively:
+
+```bash
+claude mcp add seedream --transport http https://seedream.mcp.acedata.cloud/mcp \
+  -h "Authorization: Bearer YOUR_API_TOKEN"
+```
+
+Or add to your project's `.mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "seedream": {
+      "type": "streamable-http",
+      "url": "https://seedream.mcp.acedata.cloud/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_API_TOKEN"
+      }
+    }
+  }
+}
+```
+
+#### Cline
+
+Add to Cline's MCP settings (`.cline/mcp_settings.json`):
+
+```json
+{
+  "mcpServers": {
+    "seedream": {
+      "type": "streamable-http",
+      "url": "https://seedream.mcp.acedata.cloud/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_API_TOKEN"
+      }
+    }
+  }
+}
+```
+
+#### Amazon Q Developer
+
+Add to your MCP configuration:
+
+```json
+{
+  "mcpServers": {
+    "seedream": {
+      "type": "streamable-http",
+      "url": "https://seedream.mcp.acedata.cloud/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_API_TOKEN"
+      }
+    }
+  }
+}
+```
+
+#### Roo Code
+
+Add to Roo Code MCP settings:
+
+```json
+{
+  "mcpServers": {
+    "seedream": {
+      "type": "streamable-http",
+      "url": "https://seedream.mcp.acedata.cloud/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_API_TOKEN"
+      }
+    }
+  }
+}
+```
+
+#### Continue.dev
+
+Add to `.continue/config.yaml`:
+
+```yaml
+mcpServers:
+  - name: seedream
+    type: streamable-http
+    url: https://seedream.mcp.acedata.cloud/mcp
+    headers:
+      Authorization: "Bearer YOUR_API_TOKEN"
+```
+
+#### Zed
+
+Add to Zed's settings (`~/.config/zed/settings.json`):
+
+```json
+{
+  "language_models": {
+    "mcp_servers": {
+      "seedream": {
+        "url": "https://seedream.mcp.acedata.cloud/mcp",
+        "headers": {
+          "Authorization": "Bearer YOUR_API_TOKEN"
+        }
+      }
+    }
+  }
+}
+```
+
 #### cURL Test
 
 ```bash

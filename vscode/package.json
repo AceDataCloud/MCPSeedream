@@ -24,13 +24,13 @@
     "bytedance",
     "ai art"
   ],
-  "homepage": "https://github.com/AceDataCloud/MCPSeedream",
+  "homepage": "https://github.com/AceDataCloud/SeedreamMCP",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AceDataCloud/MCPSeedream"
+    "url": "https://github.com/AceDataCloud/SeedreamMCP"
   },
   "bugs": {
-    "url": "https://github.com/AceDataCloud/MCPSeedream/issues"
+    "url": "https://github.com/AceDataCloud/SeedreamMCP/issues"
   },
   "contributes": {
     "mcpServers": {

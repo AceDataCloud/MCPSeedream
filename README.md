@@ -397,8 +397,8 @@ Options:
 
 ```bash
 # Clone repository
-git clone https://github.com/AceDataCloud/MCPSeedream.git
-cd MCPSeedream
+git clone https://github.com/AceDataCloud/SeedreamMCP.git
+cd SeedreamMCP
 
 # Create virtual environment
 python -m venv .venv
@@ -450,7 +450,7 @@ twine upload dist/*
 ## Project Structure
 
 ```
-MCPSeedream/
+SeedreamMCP/
 ├── core/                   # Core modules
 │   ├── __init__.py
 │   ├── client.py          # HTTP client for Seedream API
@@ -521,5 +521,5 @@ This server wraps the [AceDataCloud Seedream API](https://platform.acedata.cloud
 - [AceDataCloud Platform](https://platform.acedata.cloud)
 - [Seedream API Documentation](https://platform.acedata.cloud/documents/seedream-images)
 - [MCP Protocol](https://modelcontextprotocol.io)
-- [GitHub Repository](https://github.com/AceDataCloud/MCPSeedream)
+- [GitHub Repository](https://github.com/AceDataCloud/SeedreamMCP)
 - [PyPI Package](https://pypi.org/project/mcp-seedream-pro/)

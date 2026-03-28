@@ -1,4 +1,4 @@
-# Copilot Instructions for MCPSeedream
+# Copilot Instructions for SeedreamMCP
 
 ## Sync from Docs
 

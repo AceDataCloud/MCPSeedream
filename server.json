@@ -4,7 +4,7 @@
   "description": "MCP server for ByteDance Seedream AI image generation",
   "version": "2026.3.19.9",
   "repository": {
-    "url": "https://github.com/AceDataCloud/MCPSeedream",
+    "url": "https://github.com/AceDataCloud/SeedreamMCP",
     "source": "github"
   },
   "packages": [

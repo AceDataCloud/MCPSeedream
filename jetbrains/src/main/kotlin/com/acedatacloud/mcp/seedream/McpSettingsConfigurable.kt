@@ -88,7 +88,7 @@ class McpSettingsConfigurable : Configurable {
                     browserLink("API Documentation", "https://docs.acedata.cloud")
                 }
                 row {
-                    browserLink("Source Code", "https://github.com/AceDataCloud/MCPSeedream")
+                    browserLink("Source Code", "https://github.com/AceDataCloud/SeedreamMCP")
                 }
                 row {
                     browserLink("PyPI Package", "https://pypi.org/project/mcp-seedream-pro/")
